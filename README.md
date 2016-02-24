@@ -1,49 +1,102 @@
-Jekyll Clean Dark
-============
+## Indigo Minimalist Jekyll Template - [Demo](http://sergiokopplin.github.io/indigo/)
+[![Build Status](https://travis-ci.org/sergiokopplin/indigo.svg?branch=gh-pages)](https://travis-ci.org/sergiokopplin/indigo)
 
-This theme was created on top of Jekyll Clean theme by Scotte, you can view the originnal version in action [on his blog](https://scotte.github.io).
+![Screenshot](https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/screen-shot.png)
 
-* Get it from [github](https://github.com/streetturtle/jekyll-clean-dark).
-* See the [live demo](http://pavelmakhov.com/jekyll-clean-dark).
-* See it [in action on my own blog](http://pavelmakhov.com).
+This is a simple and minimalist template for Jekyll for those who likes to eat noodles.
 
-This theme uses some parts of Twitter Bootstrap, which allows it to look nice on a mobile devices using a collapsable nav bar and hiding the
-sidebar.
+---
 
-Optionally you can use:
+## What has inside?
 
- - [Disqus](http://disqus.com) as a comments system;
- - [Google Analytics](http://www.google.com/analytics/);
- - [Yandex Metrika](http://metrica.yandex.com);
- - Blog tags.
+- [Gulp](http://gulpjs.com/)
+- [BrowserSync](https://www.browsersync.io/)
+- [Stylus](http://stylus-lang.com/) with [RSCSS](http://rscss.io/) Methodology
+- [SVG](https://www.w3.org/Graphics/SVG/)
+- [Travis](https://travis-ci.org/)
+- No JS
+- [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F)
 
-All these features could be set up in `_config.yml`. Also you can have social icons which could lead to your social acounts. It uses font-awesome, so you can have any icon you want to any social profile. Out-of-the box it has: LinkedIn, GitHub, StackOverflow, LastFm, Instagram. And you can easily add more by adding new style in `theme.css` and setting it in `_config.yml`.
+# Setup
 
-Installation
-==
+1. [Install Jekyll](http://jekyllrb.com)
+2. [Install NodeJS](https://nodejs.org/)
+3. [Install Bundler](http://bundler.io/)
+4. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
+5. Edit `_config.yml` with your data.
+6. `bundle install`
+7. `npm install`
+8. `gulp`
+9. open in your browser: `http://localhost:3000`
 
-If you dont't have your own blog you can clone this repository and put your articles in a `_posts` folder.
-If you already have your own blog then I think you can clone this repository and copy-paste content keeping your `_posts` folder.
+# Settings
 
-After you will have to set up your `_config.yml`
+You have to fill some informations on `_config.yml` to customize your site.
 
-License
-=======
+```
+name: John Doe
+bio: 'A Man who travels the world eating noodles'
+picture: 'assets/images/profile.jpg'
 
-The content of this theme is distributed and licensed under a
-[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
+url: http://YOURUSER.github.io
+# like: http://sergiokopplin.github.io
+permalink: /:title/
 
-    This license lets others distribute, remix, tweak, and build upon your work,
-    even commercially, as long as they credit you for the original creation. This
-    is the most accommodating of licenses offered. Recommended for maximum
-    dissemination and use of licensed materials.
+analytics: 'UA-MYANALYTICS'
+disqus: mydisqus
+facebook: myfacebook
+twitter: mytwitter
+instagram: myinstagram
+linkedin: mylinkedin
+youtube: myyoutube
+spotify: myspotify
+github: mygithub
+email: myemail@gmail.com
+```
 
-In other words: you can do anything you want with this theme on any site, just please
-provide a link to the original theme on github.
+If you want pagination:
+```
+paginate: 5
+paginate_path: "blog/:num/"
+```
 
-This theme includes the following files which are the properties of their
-respective owners:
+If you have some projects:
+```
+projects: true
+```
 
-* js/bootstrap.min.js - [bootstrap](http://getbootstrap.com)
-* css/bootstrap.min.css - [bootstrap](http://getbootstrap.com)
-* js/jquery.min.js - [jquery](https://jquery.com)
+## Tests
+
+You can test your app with:
+
+```bash
+bundle exec htmlproof ./_site --verbose
+````
+
+If you want travis tests, you can take a look at:
+- [http://www.raywenderlich.com/109418/travis-ci-tutorial](http://www.raywenderlich.com/109418/travis-ci-tutorial)
+
+## Showcase
+
+- [fohlen.github.io](http://fohlen.github.io/) by @[Lennard Berger](https://github.com/Fohlen)
+- [gedankenstuecke.github.io](http://gedankenstuecke.github.io) by @[Bastian Greshake](https://github.com/gedankenstuecke)
+
+> open a [pull-request](https://github.com/sergiokopplin/indigo/pulls) if you want your site in this awesome list
+
+## Contributions
+
+- [Siddhant Jain](http://github.com/siddhantjain)
+- [Jeanderson Barros Candido](http://github.com/jeandersonbc)
+- [Rootul Patel](http://github.com/rootulp)
+- [Bastian Greshake](http://github.com/gedankenstuecke)
+- [Phat Nguyen](http://github.com/npvinhphat)
+
+## Problems?
+
+Tell me on github or open a [issue](https://github.com/sergiokopplin/indigo/issues/new).
+
+---
+
+## License
+
+[MIT](http://kopplin.mit-license.org/) License © Sérgio Kopplin
