@@ -1,31 +1,21 @@
 ---
 layout: default
 ---
-{% include header.html %}
 
-<h1 class="title">{{ page.title }}</h1>
-
-<span class="date">
-    <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
-    {% if site.read-time %} - {% include read-time.html %}{% endif %}
-</span>
-
-{% if site.show-tags %}
-    <div class="tags">
-        {% for tag in page.tags %}
-            <span class="item">{{ tag }}</span>
-        {% endfor %}
-    </div>
-{% endif %}
-
-{{content}}
-
-{% if site.related %}
-    {% include related.html %}
-{% endif %}
-
-{% include author.html %}
-
-{% include disqus.html %}
-
-{% include footer.html %}
+<h1>{{ page.title }}</h1>
+<p>
+  <span class="label label-info">
+    <i class="fa fa-fw fa-calendar-o"></i>
+    {{ page.date | date_to_string }}
+  </span>
+  &nbsp;
+  {% for tag in page.tags %}
+    <span class="label label-default">
+      <i class="fa fa-fw fa-tag"></i>
+      {{ tag }}
+    </span>
+    {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+</p>
+<hr />
+{{ content }}
